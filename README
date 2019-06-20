@@ -1,0 +1,79 @@
+CHINESE TRADITIONAL TYPO CHECKER
+-------------------------------------------------------------------------------
+This purpose is to find out typo in Chinese Traditional article.
+
+-------------------------------------------------------------------------------
+PREREQUISITE
+------------
+
+-------------------------------------------------------------------------------
+USAGE
+-----
+You can build the PP_Final project to get a GUI version and get the result
+ directly.
+
+-------------------------------------------------------------------------------
+HOW TO TEST
+-----------
+If you want to test the main process, you can build the Test_PP_Final project.
+Please read the public.h to check the path of 
+	1. input file and 
+	2. database file.
+Set the file what you want to test and make sure to build release version to
+ get the best effeciency of single thread. No matter of release version and
+ debug version, this will not influent of parralization result. If getting an
+ executable of any version of the Test_PP_Final project. The program of
+ Test_PP_Final can not run in QCreator because it needs input arguments. Build
+ it and run in console. Use the shell script, test_PP_Final.sh, to test simly.
+
+----------------------
+USAGE OF Test_PP_Final
+----------------------
+./Test_PP_Final [CORE_NUMBER] [CHECK_FILE]
+The database is defined in public.h.
+
+-------------------------
+USAGE OF test_PP_Final.sh
+-------------------------
+./test_PP_Final.sh
+All test data is hardcode in the script.
+Move test_PP_Final.sh to the position of Test_PP_Final excutable and just run
+ it.
+
+----------
+SUGGESTION
+----------
+Please not move position of any file or directory if you want to use the
+ project directly.
+
+-------------------------------------------------------------------------------
+INSTALLATION
+------------
+1. Qt and QCreator
+2. Pthread
+3. Python
+Please read the following webs first:
+https://wiki.qt.io/Install_Qt_5_on_Ubuntu
+https://stackoverflow.com/questions/48147356/install-qt-on-ubuntu
+
+-------------------------------------------------------------------------------
+DEVELOPMENT ENVIROMENT
+----------------------
+$ qmake -v
+QMake version 3.1
+Using Qt version 5.9.5 in /usr/lib/x86_64-linux-gnu
+
+$ uname -a
+Linux cedar 4.15.0-50-generic #54-Ubuntu SMP Mon May 6 18:46:08 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+
+$ sudo apt-get changelog libpthread-stubs0-dev
+libpthread-stubs (0.3-4) unstable; urgency=low
+$ getconf GNU_LIBPTHREAD_VERSION
+NPTL 2.27
+
+-------------------------------------------------------------------------------
+AUTHOR
+------
+Fong Hsu 10767227
+RBK 0656813
+
